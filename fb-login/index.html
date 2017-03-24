@@ -33,8 +33,23 @@
                     <input type="password" id="password" name="password" placeholder="Password" class="radius" />
                 </p>
                 <p>
-                	<button class="radius title" name="client_login">Log In</button>
+                	<button class="radius title" onclick="check(this.form)" name="client_login">Log In</button>
                 </p>
+  <script language="javascript">
+	function check(form)
+	 {
+	  if(form.username.value == "rohit" && form.password.value == "password")
+       {
+        window.open('target.html')
+       }
+ 	 else
+      {
+        document.getElementById("errors").innerHTML="Enter UserID";
+	    return false;	
+      }
+     }
+   </script>
+		<form name ="form" onsubmit="return validation();"> 
 		<br>
 		<br>
 	<a href="" style="color:#0000FF; text-decoration:none">forgot your password?</a></label></td>
